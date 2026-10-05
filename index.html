@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oktav Rizky Kurniawan - OS Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00ffcc',
+                            magenta: '#ff00ff',
+                            yellow: '#fcee0a',
+                            dark: '#020508'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Share Tech Mono"', 'monospace'],
+                        pixel: ['"Press Start 2P"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-brand-dark text-brand-cyan font-mono overflow-hidden h-screen w-screen relative">
+
+    <div class="crt-overlay"></div>
+    <div class="bg-grid"></div>
+
+    <!-- HUD -->
+    <div class="fixed top-5 left-5 text-brand-yellow text-xs opacity-50 animate-pulse z-10">SYS.CORE // ONLINE</div>
+    <div class="fixed top-5 right-5 text-brand-yellow text-xs opacity-50 animate-pulse z-10">V.2025_UNNES</div>
+    <div class="fixed bottom-5 left-5 text-brand-yellow text-xs opacity-50 animate-pulse z-10">MEM: OK</div>
+    <div class="fixed bottom-5 right-5 text-brand-yellow text-xs opacity-50 animate-pulse z-10">ID: ORK</div>
+
+    <!-- Main Container -->
+    <div class="w-full h-full p-4 md:p-10 overflow-y-auto pb-24 relative z-10 cursor-none">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+            
+            <!-- KOLOM KIRI -->
+            <div class="col-span-1 lg:col-span-4 flex flex-col gap-6">
+                <!-- Identity Panel -->
+                <article class="glass-panel animate-slide-left">
+                    <header class="bg-[#00ffcc26] px-4 py-2 border-b border-[#00ffcc66] flex justify-between items-center text-[0.7rem]">
+                        <span class="font-pixel text-white drop-shadow-[1px_1px_0_#000]">IDENTITY.exe</span>
+                        <div class="flex gap-1">
+                            <div class="w-2.5 h-2.5 bg-brand-cyan"></div>
+                            <div class="w-2.5 h-2.5 bg-brand-yellow"></div>
+                            <div class="w-2.5 h-2.5 bg-brand-magenta"></div>
+                        </div>
+                    </header>
+                    <div class="p-6 flex flex-col items-center">
+                        <div class="glitch-img w-24 h-24 mb-4 rounded-full border-2 border-brand-magenta shadow-[0_0_15px_#ff00ff]"></div>
+                        <h2 class="text-white text-xl text-center mb-2 font-pixel shadow-brand-magenta drop-shadow-[2px_2px_0_#ff00ff]">OKTAV RIZKY KURNIAWAN</h2>
+                        <p class="text-brand-yellow text-sm mb-6 text-center">MAHASISWA UNNES '25</p>
+                        
+                        <div class="w-full space-y-4">
+                            <div>
+                                <label class="text-xs text-white mb-1 block">LOGIKA SISTEM</label>
+                                <div class="w-full h-3 bg-black/50 border border-brand-cyan">
+                                    <div class="h-full bg-brand-cyan w-[85%] shadow-[0_0_10px_#00ffcc]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-xs text-white mb-1 block">KREATIVITAS</label>
+                                <div class="w-full h-3 bg-black/50 border border-brand-cyan">
+                                    <div class="h-full bg-brand-magenta w-[90%] shadow-[0_0_10px_#ff00ff]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Academic Panel -->
+                <article class="glass-panel animate-slide-left" style="animation-delay: 0.2s">
+                    <header class="bg-[#00ffcc26] px-4 py-2 border-b border-[#00ffcc66] flex justify-between items-center text-[0.7rem]">
+                        <span class="font-pixel text-white drop-shadow-[1px_1px_0_#000]">ACADEMIC_LOG.sys</span>
+                    </header>
+                    <div class="p-6">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Fokus utama pada pendidikan teknik informatika dan komputer. Mengintegrasikan teknologi informasi dan pendidikan melalui jalur akademis.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="border-b border-dashed border-gray-600 pb-1 text-sm flex justify-between">
+                                <span class="text-brand-magenta">INSTITUSI:</span>
+                                <span class="text-white">Univ. Negeri Semarang</span>
+                            </li>
+                            <li class="border-b border-dashed border-gray-600 pb-1 text-sm flex justify-between">
+                                <span class="text-brand-magenta">PROGRAM:</span>
+                                <span class="text-white">PTIK</span>
+                            </li>
+                            <li class="border-b border-dashed border-gray-600 pb-1 text-sm flex justify-between">
+                                <span class="text-brand-magenta">ANGKATAN:</span>
+                                <span class="text-white">2025</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <!-- KOLOM KANAN -->
+            <div class="col-span-1 lg:col-span-8 flex flex-col gap-6">
+                <!-- Exploration Panel -->
+                <article class="glass-panel animate-slide-right">
+                    <header class="bg-[#00ffcc26] px-4 py-2 border-b border-[#00ffcc66] flex justify-between items-center text-[0.7rem]">
+                        <span class="font-pixel text-white drop-shadow-[1px_1px_0_#000]">SPEKTRUM_EKSPLORASI.dat</span>
+                    </header>
+                    <div class="p-6">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Persilangan berbagai disiplin ilmu membentuk perspektif luas. <span class="text-brand-yellow">Klik pada modul di bawah</span> untuk mengakses detail informasi.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="node-container">
+                            <!-- Nodes will be injected here from data.js -->
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vision Panel -->
+                <article class="glass-panel animate-slide-right" style="animation-delay: 0.2s">
+                    <header class="bg-[#00ffcc26] px-4 py-2 border-b border-[#00ffcc66] flex justify-between items-center text-[0.7rem]">
+                        <span class="font-pixel text-white drop-shadow-[1px_1px_0_#000]">FUTURE_DIRECTIVES.exe</span>
+                    </header>
+                    <div class="p-6 flex flex-col md:flex-row gap-8 items-center">
+                        <div class="relative border-2 border-brand-yellow p-6 text-center bg-[#fcee0a0d] hover:bg-brand-yellow hover:text-black transition-all duration-300 min-w-[250px] group cursor-none interactable">
+                            <div class="absolute -inset-1 border border-brand-yellow animate-[ringPulse_2s_infinite] opacity-0 group-hover:opacity-100 pointer-events-none"></div>
+                            <h3 class="font-pixel text-sm mb-3">FOKUS UTAMA</h3>
+                            <p class="font-pixel text-[0.65rem]">GAME DEVELOPER</p>
+                            <span class="mt-4 inline-block px-3 py-1 bg-black text-brand-yellow border border-brand-yellow text-[0.6rem] font-pixel group-hover:bg-brand-yellow group-hover:text-black group-hover:border-black">EXPERT TIER</span>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <p class="text-gray-300 text-sm mb-4">
+                                <strong class="text-brand-magenta">Rencana Alternatif (AI-Proof):</strong> Penguasaan arsitektur fundamental sistem yang sulit tergantikan oleh kecerdasan buatan.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="tag hover-trigger interactable" data-title="Data Center Admin" data-detail="Mengelola infrastruktur jaringan dan server berskala raksasa.">DCA</span>
+                                <span class="tag hover-trigger interactable" data-title="Back End Developer" data-detail="Membangun arsitektur server dan logika bisnis database.">BACK_END</span>
+                                <span class="tag hover-trigger interactable" data-title="OS Developer" data-detail="Mengembangkan kernel dan sistem operasi tingkat dasar.">OS_DEV</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Cursor Canvas -->
+    <canvas id="cursor-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-[99999]"></canvas>
+
+    <!-- Tooltip Box (Hidden by default) -->
+    <div id="tooltip-box" class="tooltip-container fixed z-[99998] bg-[#02060cfa] border-2 border-brand-yellow p-4 w-[280px] shadow-[6px_6px_0_rgba(0,0,0,0.9)] opacity-0">
+        <h4 id="tt-title" class="font-pixel text-[0.65rem] text-brand-yellow mb-2 border-b border-dashed border-brand-yellow pb-2 leading-relaxed"></h4>
+        <p id="tt-detail" class="text-white text-[0.85rem] leading-relaxed font-mono"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        // Render Nodes to Homepage
+        const container = document.getElementById('node-container');
+        if (container && window.ExplorationData) {
+            let html = '';
+            for (const key in window.ExplorationData) {
+                const item = window.ExplorationData[key];
+                html += `
+                    <a href="detail.html?id=${key}" class="node interactable hover-trigger block" data-title="${item.title}" data-detail="${item.shortDesc}">
+                        <div class="absolute top-0 -left-full w-full h-full bg-[#00ffcc33] transition-all duration-300 group-hover:left-0"></div>
+                        <span class="relative z-10">${item.label}</span>
+                    </a>
+                `;
+            }
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

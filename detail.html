@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Arsip - OS Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00ffcc',
+                            magenta: '#ff00ff',
+                            yellow: '#fcee0a',
+                            dark: '#020508'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Share Tech Mono"', 'monospace'],
+                        pixel: ['"Press Start 2P"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-brand-dark text-brand-cyan font-mono overflow-hidden h-screen w-screen relative">
+
+    <div class="crt-overlay"></div>
+    <div class="bg-grid"></div>
+
+    <div class="fixed top-5 left-5 text-brand-yellow text-xs opacity-50 animate-pulse z-10">ARCHIVE_VIEWER // ONLINE</div>
+
+    <!-- Main Container -->
+    <div class="w-full h-full flex items-center justify-center p-4 md:p-10 relative z-10 cursor-none">
+        
+        <article class="glass-panel w-full max-w-3xl animate-slide-left relative">
+            <header class="bg-[#00ffcc26] px-4 py-3 border-b border-[#00ffcc66] flex justify-between items-center text-[0.7rem]">
+                <span class="font-pixel text-white drop-shadow-[1px_1px_0_#000]" id="detail-header-title">LOADING.sys...</span>
+                <div class="flex gap-2">
+                    <a href="index.html" class="font-pixel text-brand-magenta hover:text-white interactable underline decoration-dashed">X CLOSE</a>
+                </div>
+            </header>
+            
+            <div class="p-8">
+                <a href="index.html" class="inline-block mb-6 text-gray-400 hover:text-brand-cyan transition-colors interactable">
+                    ← Kembali ke Dashboard Utama
+                </a>
+                
+                <h1 id="detail-title" class="text-3xl font-pixel text-brand-cyan mb-4 drop-shadow-[2px_2px_0_#ff00ff]"></h1>
+                <div class="w-16 h-1 bg-brand-yellow mb-6"></div>
+                
+                <p id="detail-content" class="text-white text-lg leading-relaxed mb-8 whitespace-pre-line"></p>
+                
+                <div class="p-4 bg-black/50 border border-brand-cyan rounded">
+                    <p class="text-xs text-brand-cyan font-pixel mb-2">>_ STATUS ANALISIS:</p>
+                    <p class="text-sm text-gray-300" id="detail-status"></p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+
+    <!-- Interactive Cursor Canvas -->
+    <canvas id="cursor-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-[99999]"></canvas>
+
+    <!-- Scripts -->
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        // Ambil ID dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        
+        if (id && window.ExplorationData && window.ExplorationData[id]) {
+            const data = window.ExplorationData[id];
+            document.title = data.title + " - Arsip Detail";
+            document.getElementById('detail-header-title').textContent = `ARSIP_${id.toUpperCase()}.dat`;
+            document.getElementById('detail-title').textContent = data.title;
+            document.getElementById('detail-content').textContent = data.longDesc;
+            document.getElementById('detail-status').textContent = data.status;
+        } else {
+            document.getElementById('detail-header-title').textContent = `ERROR_404`;
+            document.getElementById('detail-title').textContent = "FILE NOT FOUND";
+            document.getElementById('detail-content').textContent = "Data tidak ditemukan di dalam sistem. Pastikan parameter URL benar.";
+            document.getElementById('detail-status').textContent = "SYSTEM FAILURE";
+        }
+    </script>
+</body>
+</html>
